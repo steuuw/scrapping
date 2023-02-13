@@ -2,7 +2,7 @@ import requests
 import csv
 from bs4 import BeautifulSoup
 
-brand = "RENAULT"
+brand = "MERCEDES"
 year_max = 2022
 year_min = 2010
 km_max = 100000
