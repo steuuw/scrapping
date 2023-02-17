@@ -2,8 +2,8 @@ import requests
 import csv
 from bs4 import BeautifulSoup
 
-# On définit des constantes qui sont utilisées comme paramètres lors de l'extraction des données de la centrale.
-brand = "MERCEDES"
+# On définit des constantes qui sont utilisées comme paramètres pour récup les données de la centrale.
+brand = "RENAULT"
 year_max = 2022
 year_min = 2010
 mileage_max = 100000
@@ -12,7 +12,7 @@ energy = "ess"
 price_min = 0
 price_max = 28300
 
-# Notre fonction scrap_listing et ses paramètres
+# fonction scrap_listing et ses paramètres
 def scrap_listing(brand, year_max, year_min, mileage_min, mileage_max, energy, price_min, price_max, page_num):
     # On construit notre url avec nos paramètre définis 
     url = "https://www.lacentrale.fr/listing?energies={energy}&makesModelsCommercialNames={brand}&mileageMax={mileage_max}&mileageMin={mileage_min}&priceMax={price_max}&priceMin={price_min}&yearMax={year_max}&yearMin={year_min}&options=&page={page_num}".format(
